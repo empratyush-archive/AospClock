@@ -41,6 +41,6 @@ internal class HeaderViewHolder private constructor(itemView: View)
     }
 
     companion object {
-        const val VIEW_TYPE_ITEM_HEADER = R.layout.ringtone_item_header
+        val VIEW_TYPE_ITEM_HEADER = R.layout.ringtone_item_header
     }
 }
