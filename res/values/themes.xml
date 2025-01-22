@@ -17,6 +17,8 @@
 
 <resources xmlns:tools="http://schemas.android.com/tools">
 
+    <item name="lightStatusBar" type="bool">true</item>
+
     <style name="Theme.DeskClock" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:colorBackgroundFloating" >
             ?attr/colorBackgroundFloating
@@ -26,7 +28,7 @@
         <item name="android:timePickerStyle" >@style/Widget.TimePicker</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-
+        <item name="android:windowLightStatusBar">@bool/lightStatusBar</item>
 
         <item name="imageButtonStyle">@style/Widget.ImageButton</item>
         <item name="popupTheme">@style/ThemeOverlay.Popup</item>
