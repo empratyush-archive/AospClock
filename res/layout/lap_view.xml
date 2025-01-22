@@ -32,6 +32,7 @@
         android:fontFeatureSettings="tnum"
         android:gravity="start"
         android:textAllCaps="false"
+        android:textColor="?android:attr/colorPrimary"
         android:textAppearance="@style/SecondaryLabelTextAppearance" />
 
     <TextView

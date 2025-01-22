@@ -223,7 +223,7 @@ public class AlarmActivity extends BaseActivity
         mDismissButton.setOnClickListener(this);
 
         mAlarmAnimator = AnimatorUtils.getScaleAnimator(mAlarmButton, 1.0f, 0.0f);
-        mSnoozeAnimator = getButtonAnimator(mSnoozeButton, Color.WHITE);
+        mSnoozeAnimator = getButtonAnimator(mSnoozeButton, ThemeUtils.resolveColor(this, R.attr.colorAccent));
         mDismissAnimator = getButtonAnimator(mDismissButton, mCurrentHourColor);
         mPulseAnimator = ObjectAnimator.ofPropertyValuesHolder(pulseView,
                 PropertyValuesHolder.ofFloat(CircleView.RADIUS, 0.0f, pulseView.getRadius()),
@@ -517,7 +517,7 @@ public class AlarmActivity extends BaseActivity
 
         getAlertAnimator(mDismissButton, R.string.alarm_alert_off_text, null /* infoText */,
                 getString(R.string.alarm_alert_off_text) /* accessibilityText */,
-                Color.WHITE, mCurrentHourColor).start();
+                ThemeUtils.resolveColor(this, R.attr.colorAccent), mCurrentHourColor).start();
 
         AlarmStateManager.deleteInstanceAndUpdateParent(this, mAlarmInstance);
 
@@ -567,7 +567,7 @@ public class AlarmActivity extends BaseActivity
                 PropertyValuesHolder.ofInt(AnimatorUtils.DRAWABLE_ALPHA,
                         BUTTON_DRAWABLE_ALPHA_DEFAULT, 255),
                 PropertyValuesHolder.ofObject(AnimatorUtils.DRAWABLE_TINT,
-                        AnimatorUtils.ARGB_EVALUATOR, Color.WHITE, tintColor));
+                        AnimatorUtils.ARGB_EVALUATOR, ThemeUtils.resolveColor(this, R.attr.colorAccent), tintColor));
     }
 
     private ValueAnimator getAlarmBounceAnimator(float translationX, final int hintResId) {

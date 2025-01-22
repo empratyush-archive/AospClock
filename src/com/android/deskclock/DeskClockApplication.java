@@ -27,12 +27,14 @@ import com.android.deskclock.controller.Controller;
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.events.LogEventTracker;
 import com.android.deskclock.uidata.UiDataModel;
+import com.google.android.material.color.DynamicColors;
 
 public class DeskClockApplication extends Application {
 
     @Override
     public void onCreate() {
         super.onCreate();
+        DynamicColors.applyToActivitiesIfAvailable(this);
 
         final Context applicationContext = getApplicationContext();
         final SharedPreferences prefs = getDefaultSharedPreferences(applicationContext);

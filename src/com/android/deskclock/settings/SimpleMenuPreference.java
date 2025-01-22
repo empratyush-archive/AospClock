@@ -20,12 +20,15 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.preference.DropDownPreference;
+
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
 import com.android.deskclock.R;
+import com.android.deskclock.ThemeUtils;
 import com.android.deskclock.Utils;
 
 /**
@@ -133,9 +136,9 @@ public class SimpleMenuPreference extends DropDownPreference {
         public View getDropDownView(int position, View convertView, @NonNull ViewGroup parent) {
             final View view = super.getDropDownView(position, convertView, parent);
             if (position == 0) {
-                view.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.white_08p));
+                view.setBackgroundColor(ThemeUtils.resolveColor(getContext(), R.attr.colorAccent));
             } else {
-                view.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.transparent));
+                view.setBackgroundColor(Color.TRANSPARENT);
             }
             return view;
         }

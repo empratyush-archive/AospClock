@@ -20,7 +20,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.util.Property;
@@ -28,6 +27,7 @@ import android.view.Gravity;
 import android.view.View;
 
 import com.android.deskclock.R;
+import com.android.deskclock.ThemeUtils;
 
 /**
  * A {@link View} that draws primitive circles.
@@ -97,7 +97,7 @@ public class CircleView extends View {
         mCenterY = a.getDimension(R.styleable.CircleView_centerY, 0.0f);
         mRadius = a.getDimension(R.styleable.CircleView_radius, 0.0f);
 
-        mCirclePaint.setColor(a.getColor(R.styleable.CircleView_fillColor, Color.WHITE));
+        mCirclePaint.setColor(a.getColor(R.styleable.CircleView_fillColor, ThemeUtils.resolveColor(context, R.attr.colorAccent)));
 
         a.recycle();
     }

@@ -258,7 +258,7 @@ public class Utils {
      */
     public static void dimClockView(boolean dim, View clockView) {
         Paint paint = new Paint();
-        paint.setColor(Color.WHITE);
+        paint.setColor(ThemeUtils.resolveColor(clockView.getContext(), R.attr.colorAccent));
         paint.setColorFilter(new PorterDuffColorFilter(
                 (dim ? 0x40FFFFFF : 0xC0FFFFFF),
                 PorterDuff.Mode.MULTIPLY));

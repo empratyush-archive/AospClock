@@ -16,6 +16,7 @@
 
 package com.android.deskclock.ringtone;
 
+import android.graphics.Color;
 import android.graphics.PorterDuff;
 import androidx.core.content.ContextCompat;
 import android.view.ContextMenu;
@@ -88,8 +89,8 @@ final class RingtoneViewHolder extends ItemAdapter.ItemViewHolder<RingtoneHolder
 
         mSelectedView.setVisibility(itemHolder.isSelected() ? VISIBLE : GONE);
 
-        final int bgColorId = itemHolder.isSelected() ? R.color.white_08p : R.color.transparent;
-        itemView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(), bgColorId));
+        final int bgColorId = itemHolder.isSelected() ? ThemeUtils.resolveColor(itemView.getContext(), R.attr.colorAccent) : Color.TRANSPARENT;
+        itemView.setBackgroundColor(bgColorId);
 
         if (itemViewType == VIEW_TYPE_CUSTOM_SOUND) {
             itemView.setOnCreateContextMenuListener(this);
