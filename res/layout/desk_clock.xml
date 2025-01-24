@@ -43,7 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:tabGravity="fill"
-                app:tabIndicatorColor="@android:color/transparent"
+                app:tabIndicatorColor="?attr/colorAccent"
                 app:tabMaxWidth="0dp"
                 app:tabMode="fixed"
                 app:tabPaddingEnd="0dp"
